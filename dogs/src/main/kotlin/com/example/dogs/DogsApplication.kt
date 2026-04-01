@@ -20,6 +20,7 @@ import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.ResponseBody
+import org.springframework.web.servlet.ModelAndView
 import org.springframework.web.servlet.function.RouterFunction
 import org.springframework.web.servlet.function.ServerResponse
 import org.springframework.web.servlet.function.router
@@ -32,6 +33,7 @@ class DogsApplication
 fun main(args: Array<String>) {
     runApplication<DogsApplication>(*args)
 }
+
 
 data class Dog(val name: String, @Id val id: Int, val description: String)
 
@@ -74,6 +76,11 @@ class DogsBeanRegistrar : BeanRegistrarDsl({
 @Controller
 class DogsController(val dogsRepository: DogsRepository) {
 
+    @GetMapping("/hw")
+    fun hw(mav: ModelAndView) {
+        println(mav.status!!.isError)
+        mapOf("message" to "hello world")
+    }
 
     @GetMapping("/jte.html")
     fun index(model: Model): String {
@@ -110,7 +117,6 @@ class DogsController(val dogsRepository: DogsRepository) {
         return doc.serialize()
 
     }
-
 
     @GetMapping("/sse", produces = [MediaType.TEXT_EVENT_STREAM_VALUE])
     suspend fun stream(): kotlinx.coroutines.flow.Flow<String> {
