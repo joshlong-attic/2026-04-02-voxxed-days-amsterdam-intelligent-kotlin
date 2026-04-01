@@ -1,0 +1,15 @@
+ https://github.com/sdeleuze/spring-petklinik
+- were in an amazing place to build ai systems and services
+- https://www.tmdevlab.com/mcp-server-performance-benchmark.html
+- venkat explains it all 
+- but lets see what coroutines look like in the context of a spring app
+- start.spring.io (gradle, kotlin, jte, etc. (see bookmarked profile))
+- kotlin  
+- all open plugin
+- tmdevlab
+- jspecify
+- kotlin serialization
+- BeanRegistrar
+- exposed / exoquery 
+- web + reactive 
+- gateway 
