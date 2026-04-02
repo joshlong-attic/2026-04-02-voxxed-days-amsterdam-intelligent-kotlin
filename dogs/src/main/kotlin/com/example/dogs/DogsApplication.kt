@@ -77,9 +77,9 @@ class DogsBeanRegistrar : BeanRegistrarDsl({
 class DogsController(val dogsRepository: DogsRepository) {
 
     @GetMapping("/hw")
-    fun hw(mav: ModelAndView) {
+    fun hw(mav: ModelAndView): Map<String, String> {
         println(mav.status!!.isError)
-        mapOf("message" to "hello world")
+        return mapOf("message" to "hello world")
     }
 
     @GetMapping("/jte.html")

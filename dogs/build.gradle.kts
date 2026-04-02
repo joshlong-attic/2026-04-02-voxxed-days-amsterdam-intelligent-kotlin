@@ -21,24 +21,8 @@ repositories {
 
 dependencies {
 
-
-//    kotlinx-html = "0.12.0"
-//
-//[libraries]
-//kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.9.0" }
-//kotlinx-html-jvm = { module = "org.jetbrains.kotlinx:kotlinx-html-jvm", version.ref = "kotlinx-html" }
-//kotlinx-html-common = { module = "org.jetbrains.kotlinx:kotlinx-html", version.ref = "kotlinx-html" }
-//kotlinx-browser = { module = "org.jetbrains.kotlinx:kotlinx-browser", version = "0.5.0" }
-//konform = { module = "io.konform:konform", version = "0.11.1" }
-
-
-//    implementation("jetbrains.kotlinx:kotlinx-html-jvm:0.12.0")
-
-    implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.8.0")
-
-//    implementation("jetbrains.kotlinx:kotlinx-browser:0.5.0")
-
     // everything below is custom
+    implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.8.0")
     implementation("gg.jte:jte-kotlin:3.2.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     // everything above is custom
