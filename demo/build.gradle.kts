@@ -20,20 +20,24 @@ repositories {
 }
 
 dependencies {
-//	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:")
-	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+	implementation("org.springframework.boot:spring-boot-starter-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-webmvc")
 	implementation("gg.jte:jte-spring-boot-starter-4:3.2.3")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("tools.jackson.module:jackson-module-kotlin")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")
+	testImplementation("org.springframework.boot:spring-boot-starter-data-jdbc-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-jdbc-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+	implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.8.0")
+	implementation("gg.jte:jte-kotlin:3.2.3")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+
 }
 
 kotlin {

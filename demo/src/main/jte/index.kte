@@ -1,4 +1,4 @@
-@import com.example.dogs.Dog
+@import com.example.demo.Dog
 @param dogs : List<Dog>
 
 <!DOCTYPE html>
@@ -8,10 +8,10 @@
 </head>
 <body>
 <h1> dogs </h1>
-<o>
+<ol>
     @for (dog in dogs)
         <li>${dog.name}</li>
     @endfor
-</o>
+</ol>
 </body>
 </html>
