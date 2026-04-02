@@ -51,6 +51,14 @@ class DogsController(val dogsRepository: DogRepository) {
     @ResponseBody
     fun rest(): List<Dog> = dogsRepository.findAll()
 
+    @GetMapping("/later")
+    suspend fun later(): String = run {
+        println(Thread.currentThread())
+        delay(2.seconds)
+        println(Thread.currentThread())
+        "later"
+    }
+
     @GetMapping("/sse", produces = [MediaType.TEXT_EVENT_STREAM_VALUE])
     suspend fun sse(): Flow<String> {
         return flow {
